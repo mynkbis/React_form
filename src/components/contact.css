@@ -1,0 +1,34 @@
+.Form_container{
+    display: flex;
+    border: 2px;
+    border-color: aqua;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-content: center;
+    color: black;
+}
+
+
+.Form_container_body{
+        border: 2px;
+    border-color: aqua;
+    background: beige;  
+    align-content: space-between; 
+
+    }
+
+.Contact_body{
+    display: block;
+    padding: 50px;
+    margin: 10px;
+    align-content: space-between;
+}
+
+.Contact_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+
+}
