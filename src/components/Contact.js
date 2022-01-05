@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './contact.css';
-
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Contact() {
     const [user, setUser]=useState({
@@ -55,7 +56,7 @@ if(Option){
         Address:'',
         Message:'',
     })
-    alert("Your Submission is Successful")
+   
 
 }
     }
@@ -63,64 +64,40 @@ if(Option){
     return (
          <div className='Form_container'>
                    <div className='Form_container_body'>
-                             <form className='Contact_body' method='POST'>     
-                                           <span className='Contact_body_title'><strong>Contact US</strong></span>
+                   <span className='Contact_body_title'><strong>Contact Us</strong></span>
+            <form className='Contact_body' method='POST'>     
+                                           
             <div className='Contact_name'>
-            <span className='contact_name_title'>Your Name</span>
-            <input className='contact_input' type='text'
-                 name='First Name' 
-                 placeholder='Enter your first name' 
-                 defaultValue={user.First_name} onChange={getUserData} 
-                 autoComplete='off' ></input>
-
-                  <input className='contact_input' 
-                  type='text' name='Last Name' 
-                  placeholder='Enter your Last name' 
-                  defaultValue={user.Last_name} 
-                  onChange={getUserData} 
-                  autoComplete='off' ></input>
+            <span className='contact_name_title'>Please Enter Your Name</span>
+            <TextField className='contact_input'  onChange={getUserData} 
+                 autoComplete='off'id="filled-error" label="First_Name" defaultValue={user.First_name} variant="outlined" required />    
+                 <TextField className='contact_input'  onChange={getUserData} 
+                 autoComplete='off' id="filled-error" label="Middle & Last_Name" defaultValue={user.Last_name} variant="outlined"  required/>          
+                
           </div>
                     <div className='Contact_name'>
-                              <span className='contact_input'>Email</span>
-                              <input type="email" id="email" defaultValue={user.Email}
-        placeholder='Enter your Email' 
-                                    
-                                    onChange={getUserData} 
-                                    autoComplete='off' 
-                                    required ></input>
-                                                                              
-                                     </div>
+                              <span className='contact_name_title'>Email</span>
+                              <TextField className='contact_input'  onChange={getUserData} 
+                 autoComplete='off' id="filled-error" label="Email" defaultValue={user.Email} variant="outlined" required /> 
+                </div>
           <div className='Contact_name'>
                     <span className='contact_name_title'>Mobile number</span>
-                              <input className='contact_input' 
-                              type='text' name='Mobile' 
-                              placeholder='Your number' 
-                              value={user.Mobile} 
-                              onChange={getUserData} 
-                              autoComplete='off' 
-                              required></input>
+                    <TextField className='contact_input'  onChange={getUserData} 
+                 autoComplete='off' id="filled-error" label="Mobile Number" defaultValue={user.Mobile} variant="outlined" required/> 
           </div>
           <div className='Contact_name'>
                     <span className='contact_name_title'>Address</span>
-                              <input className='contact_input' 
-                              type='text' name='Address' 
-                              placeholder='Your Address' 
-                              value={user.Address} 
-                              onChange={getUserData} 
-                              autoComplete='off' 
-                              required></input>
-          </div>
+                              <TextField  className='contact_input'  label="Address Here"      defaultValue={user.Address}   variant="outlined" required />
+                                        </div>
           <div className='Contact_name'>
                     <span className='contact_name_title'>Your Message here....</span>
-                              <textarea  className='contact_input' 
-                              name='Message' placeholder='Type here..' 
-                              value={user.Message} 
-                              onChange={getUserData}
-                            autoComplete='off' required></textarea>
+                    <TextField className='contact_input'
+                   label="Type your Message" required
+                  multiline/>
           </div>
           
                     <div className='Contact_name_button'>
-                              <button onClick={postData} >Submit</button>
+                              <Button variant="contained" color="success" onClick={postData} >Submit</Button>
           
           </div>
 

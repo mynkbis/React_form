@@ -1,34 +1,55 @@
 .Form_container{
-    display: flex;
-    border: 2px;
-    border-color: aqua;
-    padding: 10px;
+     margin: 10px;
+}
+.Form_container_body{
+    background: darkgray;
     margin: 10px;
-    justify-content: center;
-    align-content: center;
-    color: black;
+    padding: 10px;
 }
 
-
-.Form_container_body{
-        border: 2px;
-    border-color: aqua;
-    background: beige;  
-    align-content: space-between; 
-
-    }
+.Contact_body_title{
+    font-size: 25px ;
+    color:darkred;
+    justify-content: center;
+    margin: 50px;
+    
+}
 
 .Contact_body{
-    display: block;
-    padding: 50px;
-    margin: 10px;
-    align-content: space-between;
+border: darkred;
+border-width: 2px;
+background: white;
+margin: 1px;
+padding: 5px;
+justify-content: space-around;
+/* display: flex;
+flex-wrap: wrap; */
+align-items: inherit;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
 }
+
 
 .Contact_name{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
+       justify-content: center;
+    margin: 10px;
+    padding: 2px;
 
+}
+.Contact_name_button{
+    margin: 10px;
+    padding:10px;
+}
+.contact_name_title{
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-right: 5px;
+}
+
+.contact_input{
+    display: flex;
+    flex:1;
+      
 }
